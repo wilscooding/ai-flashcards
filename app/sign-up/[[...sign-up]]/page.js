@@ -11,20 +11,20 @@ import {
 	Divider,
 } from "@mui/material";
 import Link from "next/link";
-import { SignIn } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs";
 import Head from "next/head";
 
-export default function SignInPage() {
+export default function SignUpPage() {
 	return (
 		<Container
-			maxWidth="100%" // Limits the width to prevent horizontal scrolling
+			maxWidth="100%" // Use xs to limit the width and prevent horizontal scroll
 			sx={{ height: "100vh", display: "flex", flexDirection: "column" }}
 		>
 			<Head>
-				<title>Sign In - Flashcard SaaS</title>
+				<title>Sign Up - Flashcard SaaS</title>
 				<meta
 					name="description"
-					content="Sign in to your Flashcard SaaS account"
+					content="Create a new account on Flashcard SaaS"
 				/>
 			</Head>
 
@@ -35,14 +35,14 @@ export default function SignInPage() {
 						Flashcard SaaS
 					</Typography>
 					<Button color="inherit">
-						<Link href="/sign-up" passHref>
-							Sign Up
+						<Link href="/sign-in" passHref>
+							Login
 						</Link>
 					</Button>
 				</Toolbar>
 			</AppBar>
 
-			{/* Sign In Form Section */}
+			{/* Sign Up Form Section */}
 			<Box
 				sx={{
 					flex: 1,
@@ -57,15 +57,15 @@ export default function SignInPage() {
 				<Card variant="outlined" sx={{ width: "100%", maxWidth: 400 }}>
 					<CardContent>
 						<Typography variant="h5" gutterBottom>
-							Sign In
+							Sign Up
 						</Typography>
-						<SignIn />
+						<SignUp />
 					</CardContent>
 					<Divider />
 					<CardActions>
 						<Button color="primary" fullWidth>
-							<Link href="/sign-up" passHref>
-								Create an Account
+							<Link href="/sign-in" passHref>
+								Already have an account? Login
 							</Link>
 						</Button>
 					</CardActions>

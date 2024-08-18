@@ -19,12 +19,8 @@ export async function POST(req) {
 					quantity: 1,
 				},
 			],
-			success_url: `${req.headers.get(
-				"Referer"
-			)}result?session_id={CHECKOUT_SESSION_ID}`,
-			cancel_url: `${req.headers.get(
-				"Referer"
-			)}result?session_id={CHECKOUT_SESSION_ID}`,
+			success_url: `${process.env.BASE_URL}result?session_id={CHECKOUT_SESSION_ID}`,
+			cancel_url: `${process.env.BASE_URL}result?session_id={CHECKOUT_SESSION_ID}`,
 		};
 		const checkoutSession = await stripe.checkout.sessions.create(params);
 		return NextResponse.json(checkoutSession);
