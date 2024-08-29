@@ -48,7 +48,17 @@ bash
    Create a `.env.local` file in the root of your project with the following:
 
 STRIPE_SECRET_KEY=your_stripe_secret_key
-    GOOGLE_API_KEY=your_google_api_key
+GOOGLE_API_KEY=your_google_api_key
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+FIREBASE_APP_ID=your_firebase_app_id
+NEXT_PUBLIC_STRIPE_PUBLIC_KEY=your_stripe_public_key
+
 
 5. **Run the Application**
    Start the development server:
