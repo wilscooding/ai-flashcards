@@ -3,10 +3,7 @@
 import getStripe from "@/utils/get-stripe";
 import { styled } from "@mui/material/styles";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import {
-
-	FaLinkedinIn,
-} from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import {
 	AppBar,
 	Box,
