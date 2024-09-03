@@ -12,6 +12,7 @@ import {
 	Typography,
 	IconButton,
 	Paper,
+	Button,
 } from "@mui/material";
 import Head from "next/head";
 import Link from "next/link";
@@ -134,7 +135,12 @@ export default function Home() {
 					name="description"
 					content="Enhance your language skills with interactive flashcards"
 				/>
+				<meta
+					name="format-detection"
+					content="telephone=no, date=no, email=no, address=no"
+				/>
 			</Head>
+
 			<Box
 				sx={{
 					minHeight: "100vh",
@@ -159,41 +165,44 @@ export default function Home() {
 						variant="h2"
 						sx={{ fontSize: "2.5rem", fontWeight: "bold", mb: 2 }}
 					>
-						<GradientText variant="h2">Welcome {dynamicText}</GradientText>
+						<GradientText variant="h2" suppressHydrationWarning>
+							Welcome {dynamicText}
+						</GradientText>
 					</Typography>
 					<Typography variant="h5" sx={{ mb: 4, color: "#000000" }}>
 						Dive into language learning with our interactive and AI-powered
 						flashcards
 					</Typography>
-					<IconButton
-						sx={{
-							mt: 2,
-							width: 150,
-							height: 150,
-							borderRadius: "50%",
-							border: "3px solid",
-							borderColor: "#007bff",
-							backgroundColor: "#0056b3",
-							color: "#fff",
-							"&:hover": {
-								borderColor: "#0056b3",
-								backgroundColor: "#004085",
-							},
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
-							justifyContent: "center",
-							p: 2,
-						}}
-						href="/generate"
-					>
-						<Typography
-							variant="body2"
-							sx={{ color: "white", mb: 1, fontSize: "1.2rem" }}
+					<Link href="/generate" passHref>
+						<IconButton
+							sx={{
+								mt: 2,
+								width: 150,
+								height: 150,
+								borderRadius: "50%",
+								border: "3px solid",
+								borderColor: "#007bff",
+								backgroundColor: "#0056b3",
+								color: "#fff",
+								"&:hover": {
+									borderColor: "#0056b3",
+									backgroundColor: "#004085",
+								},
+								display: "flex",
+								flexDirection: "column",
+								alignItems: "center",
+								justifyContent: "center",
+								p: 2,
+							}}
 						>
-							Start Your Journey <ArrowOutwardIcon sx={{ color: "white" }} />
-						</Typography>
-					</IconButton>
+							<Typography
+								variant="body2"
+								sx={{ color: "white", mb: 1, fontSize: "1.2rem" }}
+							>
+								Start Your Journey <ArrowOutwardIcon sx={{ color: "white" }} />
+							</Typography>
+						</IconButton>
+					</Link>
 				</Box>
 
 				<Box sx={{ my: 6, textAlign: "center", px: 2 }}>
