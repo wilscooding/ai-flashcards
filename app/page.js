@@ -199,7 +199,7 @@ export default function Home() {
 								variant="body2"
 								sx={{ color: "white", mb: 1, fontSize: "1.2rem" }}
 							>
-								Start Your Journey <ArrowOutwardIcon sx={{ color: "white" }} />
+								Demo Flashcards <ArrowOutwardIcon sx={{ color: "white" }} />
 							</Typography>
 						</IconButton>
 					</Link>
